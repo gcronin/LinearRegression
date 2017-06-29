@@ -3,10 +3,10 @@ from random import randint
 
 sign_alphaSlope = 1           #incrementing or decrementing slope change
 sign_alphaIntercept = 1       #incrementing or decrementing intercept change
-slope = 1                     #initial guess
+slope = 250                   #initial guess
 intercept = 0                 #initial guess
-alphaSlope = 0.01             #how much does slope change with each iteration
-alphaIntercept = 0.01         #how much does intercept change with each iteration
+alphaSlope = 1                #how much does slope change with each iteration
+alphaIntercept = 1            #how much does intercept change with each iteration
 cost = 0                      #sum of squares of differences between predicted and actual data
 previousCost = 0              #stores cost from previous iteration so we can see if cost is decreasing
 
@@ -47,6 +47,6 @@ def LinearRegression():
 
 
 
-for x in range(0,1000):
+for x in range(0,2000):
     LinearRegression()
     print('Slope: {0:.2f}'.format(slope), ' Intercept: {0:.2f}'.format(intercept), ' Cost: {0:.3f}'.format(cost), '  Previous Cost: {0:.3f}'.format(previousCost))
